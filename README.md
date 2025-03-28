@@ -89,7 +89,7 @@ This project aims to perform an in-depth analysis of Zomato's food delivery busi
     plt.show() 
 
 # 6. Which type of restaurant received more offline orders, so that Zomato can provide those customers with some good offers? 
-    # Convert 'rate' to Numeric:
+- Convert 'rate' to Numeric:
         df['rate'] = pd.to_numeric(df['rate'], errors='coerce')
 
     # Handle Missing Values:
