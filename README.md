@@ -32,4 +32,6 @@ This project aims to perform an in-depth analysis of Zomato's food delivery busi
   - Develop interactive visualizations using Matplotlib and Seaborn.
   - Create reports to present findings to stakeholders.
 
+![Zomato Data Analysis]()
+ 
 
