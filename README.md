@@ -8,10 +8,10 @@ Zomato has an average of 17.5 million monthly transacting customers for its food
 This project aims to perform an in-depth analysis of Zomato's food delivery business using Python. By leveraging Python libraries for data manipulation, analysis, and visualization, we will explore customer and restaurant data to derive actionable insights.The dataset includes information on customer orders, restaurant partnerships, and other key performance metrics. Through Exploratory Data Analysis (EDA), we will visualize trends, identify patterns, and make data-driven recommendations to enhance Zomato's business operations 
 
 # Business Objectives:
-1. Customer Behavior Analysis
-  - Understand customer ordering patterns and preferences.
-  - Identify high-value customers and suggest retention strategies.
-  - Analyze the frequency and volume of customer transactions.
+ # 1. Customer Behavior Analysis
+    - Understand customer ordering patterns and preferences.
+    - Identify high-value customers and suggest retention strategies.
+    - Analyze the frequency and volume of customer transactions.
 
 2. Restaurant Partner Evaluation
   - Assess the performance of restaurant partners using metrics like order volume, ratings, and delivery times.
