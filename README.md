@@ -89,16 +89,16 @@ This project aims to perform an in-depth analysis of Zomato's food delivery busi
     plt.show() 
 
 # 6. Which type of restaurant received more offline orders, so that Zomato can provide those customers with some good offers? 
-    - Convert 'rate' to Numeric:
+- Convert 'rate' to Numeric:
         df['rate'] = pd.to_numeric(df['rate'], errors='coerce')
 
-    - Handle Missing Values:
+- Handle Missing Values:
         df['rate'].fillna(df['rate'].mean(), inplace=True)
 
-    # Drop Remaining Null Values:
+- Drop Remaining Null Values:
         df = df.dropna(subset=['rate']) 
 
-    # Create a Pivot Table and  Visualize with a Heatmap:
+- Create a Pivot Table and  Visualize with a Heatmap:
         pivot_table = df.pivot_table(index='listed_in(type)', columns='online_order', values='rate', aggfunc='mean')
         plt.figure(figsize=(10, 8))
         sns.heatmap(pivot_table, annot=True, cmap='coolwarm', fmt=".2f")
