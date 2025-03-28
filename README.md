@@ -52,7 +52,61 @@ This project aims to perform an in-depth analysis of Zomato's food delivery busi
 
     df['rate'] =df['rate'].apply(handleRate)
     print(df.head())
-
+    
+# Step 4: Summary of the dataframe(df).
     df.isnull().sum()
+    df.info() 
+
+# Business_problem solutions.
+# 1) What type of restaurant do the majority of customers order from?
+    sns.countplot(x=df["listed_in(type)"],color="orange")
+    plt.xlabel("Type of Restaurant") 
+
+# 2. How many votes has each type of restaurant received from customers? 
+    result = df.groupby('listed_in(type)')['votes'].sum()
+    plt.plot(result, color ="green",marker= "o")
+    plt.xlabel("Type of Restaurant", color = "Red",size =30) 
+    plt.ylabel("Votes",color = "Red",size=20)
+    plt.show()
+
+# 3. What are the ratings that the majority of restaurants have received? 
+    plt.hist(df['rate'],color="skyblue" ,bins=5)
+    plt.title('Rating Distribution')
+    plt.show() 
+
+# 4. Zomato has observed that most couples order most of their food online. What is their average spending on each order?
+    couple_data = df['approx_cost(for two people)']
+    plt.figure(figsize=(10,6))
+    sns.countplot(x=couple_data,color= "Green") 
+    plt.show() 
+
+# 5. Which mode (online or offline) has received the maximum rating? 
+    plt.figure(figsize=(6,6))
+    sns.boxplot(x="online_order", y="rate", data=df, palette={"Yes": "orange", "No": "skyblue"})
+    plt.xlabel("Online Order")
+    plt.ylabel("Rating")
+    plt.title("Online Order vs Rating")
+    plt.show() 
+
+# 6. Which type of restaurant received more offline orders, so that Zomato can provide those customers with some good offers? 
+    -Convert 'rate' to Numeric:
+    df['rate'] = pd.to_numeric(df['rate'], errors='coerce')
+
+    - Handle Missing Values:
+    df['rate'].fillna(df['rate'].mean(), inplace=True)
+
+    - Drop Remaining Null Values:
+    df = df.dropna(subset=['rate']) 
+
+    - Create a Pivot Table and  Visualize with a Heatmap:
+    pivot_table = df.pivot_table(index='listed_in(type)', columns='online_order', values='rate', aggfunc='mean')
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(pivot_table, annot=True, cmap='coolwarm', fmt=".2f")
+    plt.title("Average Rating by Type and Online Order Availability")
+    plt.xlabel("Online Order")
+    plt.ylabel("Type of Restaurant")
+    plt.show()
+    
+
  
 
