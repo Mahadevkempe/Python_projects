@@ -32,7 +32,27 @@ This project aims to perform an in-depth analysis of Zomato's food delivery busi
   - Develop interactive visualizations using Matplotlib and Seaborn.
   - Create reports to present findings to stakeholders.
 
-# [Zomato Data Analysis
-    (./Zomato%20data.csv)
+# Zomato Data Analysis.
+
+# Step 1: Import necessary python libraries.
+    import pandas as pd
+    import numpy as np 
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+
+# Step 2: Create the data frame(df).
+    df = pd.read_csv("Zomato data .csv")
+    print(df.head())
+
+# Step 3: Let's convert the data type of the "rate" column to float and remove the denominator. 
+    def handleRate(value):
+        value = str(value).split('/')
+        value = value[0];
+        return float(value)
+
+    df['rate'] =df['rate'].apply(handleRate)
+    print(df.head())
+
+    df.isnull().sum()
  
 
