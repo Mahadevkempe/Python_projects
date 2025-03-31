@@ -6,7 +6,8 @@ The objective is to analyze customer data to identify the key factors contributi
 # Objective:
  The analysis explores customer churn patterns, focusing on various factors such as payment methods, contract types, tenure, and demographic attributes. The goal is to identify which factors are most strongly associated with higher churn rates to guide customer retention strategies.
  
-# Customer Churn Analysis.  
+# Customer Churn Analysis. 
+-[Python File](https://github.com/Mahadevkempe/Python_projects/blob/main/Exploratory%20Data%20Analysis%20(EDA)/Customer%20Churn.ipynb)
 
 # 1. Find the number of customers who churned and those who didn't.
     ab =sns.countplot(x= "Churn", data=df)
