@@ -50,18 +50,17 @@ plt.legend(title='Churn', bbox_to_anchor = (0.9,0.9))  # Customize legend locati
 plt.show()
 
  # 6.Analyze the distribution of customer tenure and its relationship with churn.
- 
-   plt.figure(figsize=(10,5))
-   sns.histplot(x="Tenure", data=df, bins=72, hue= "Churn")
-   plt.show() 
+plt.figure(figsize=(10,5))
+sns.histplot(x="Tenure", data=df, bins=72, hue= "Churn")
+plt.show()
 
  # 7.Analyze the relationship between contract type and churn. 
-  plt.figure(figsize=(4,4))
-  ab=sns.countplot(x="Contract", data= df, hue="Churn")
-  ab.bar_label(ab.containers[0])
-  ab.bar_label(ab.containers[1])
-  plt.title("Count of Customers by Senior Citizen")
-  plt.show()
+ plt.figure(figsize=(4,4))
+ab=sns.countplot(x="Contract", data= df, hue="Churn")
+ab.bar_label(ab.containers[0])
+ab.bar_label(ab.containers[1])
+plt.title("Count of Customers by Senior Citizen")
+plt.show()
 
 # 8.Analyze the impact of various services on customer churn using count plots.
 
@@ -83,11 +82,10 @@ plt.show()
 
 
 # 9.Examine the relationship between payment method and customer churn.
-
- plt.figure(figsize=(6,4))
- ab=sns.countplot(x="PaymentMethod", data=df, hue="Churn")
- ab.bar_label(ab.containers[0])
- ab.bar_label(ab.containers[1])
- plt.title("Churn Customers by Payment Method")
- plt.xticks(rotation=45)
- plt.show()
+plt.figure(figsize=(6,4))
+ab = sns.countplot(x="PaymentMethod", data=df, hue="Churn")
+ab.bar_label(ab.containers[0])
+ab.bar_label(ab.containers[1])
+plt.title("Churn Customers by Payment Method")
+plt.xticks(rotation=45)
+plt.show()
