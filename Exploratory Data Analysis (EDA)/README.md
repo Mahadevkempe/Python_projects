@@ -1,6 +1,7 @@
 # Exploratory Data Analysis (EDA)
 
-# Executive Summary:
+# Business Problem Statement:
+The objective is to analyze customer data to identify the key factors contributing to customer churn for a telecom company. By understanding the patterns and reasons behind customer attrition, the company can implement targeted retention strategies to reduce churn and improve customer satisfaction. The analysis will involve exploring demographics, service usage, contract types, and payment methods to derive actionable insights
 
 # Objective:
  The analysis explores customer churn patterns, focusing on various factors such as payment methods, contract types, tenure, and demographic attributes. The goal is to identify which factors are most strongly associated with higher churn rates to guide customer retention strategies.
