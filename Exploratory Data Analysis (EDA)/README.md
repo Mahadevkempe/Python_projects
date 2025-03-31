@@ -60,4 +60,7 @@
    Focus on improving the customer experience within the first year, as churn is highest in this period.
    
 # ● Special Senior Citizen Retention Programs:
-   Create personalized offers or assistanceprograms to retain the senior demographic.
+   Create personalized offers or assistanceprograms to retain the senior demographic. 
+
+# Customer Churn Analysis.  
+
