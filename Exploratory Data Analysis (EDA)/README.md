@@ -36,7 +36,7 @@
    
 # Visualizations & Data Insights:
 
- ● BarCharts and Line Graphs:
+# ● BarCharts and Line Graphs:
  ○ Thevisual representation of churn by payment method clearly shows that customers using electronic checks churn almost three times as much as those using more traditional 
    or secure methods like credit cards.
  ○ Customertenure vs. churn rate visualizations reveal a clear declining trend in churn as customers' tenure increases, underscoring the need for early-stage customer 
